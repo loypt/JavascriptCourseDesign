@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>期末设计注册表单</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/fontawesome-all.min.css">
+    <!-- Bootstrap style sheet-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/mdb.css">
+    <!-- Custom Style Sheet-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="">
+            <fieldset>
+                <legend>您的名称</legend>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="userName">你的登录名：</label>
+                    <input type="text" class="col-md-5 h-50 form-control" id="userName">
+                    <div class="col-md-4">
+                        <span id="userNamePrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>用户名已经输入。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <span class="col-md-3"></span>
+                    <input type="button" class="col-md-5" value="查看用户名、域名是否可用">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>安全资料</legend>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="userPasswd">输入登录密码：</label>
+                    <input type="password" class="col-md-5 h-50 form-control" id="userPasswd">
+                    <div class="col-md-4">
+                        <span id="userPasswdPrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>密码已经输入。</span>
+                    </div>
+                </div>
+                <div class="row pl-5 pb-2">
+                    <span class="col-md-3"></span>
+                    <span class="passwd-intensity passwd-red" id="passwdWeak">弱</span><span class="passwd-intensity" id="passwdMiddle">中</span><span class="passwd-intensity" id="passwdStrong">强</span>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="userPasswd">登录密码确认：</label>
+                    <input type="password" class="col-md-5 h-50 form-control" id="userPasswdAgain">
+                    <div class="col-md-4">
+                        <span id="userPasswdAgainPrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>重复密码输入正确。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="PasswdQuestion">密码提示问题：</label>
+                    <select class="col-md-5 h-50 form-control" id="PasswdQuestion">
+                        <option value="QFirst">我最大的爱好？</option>
+                        <option value="QSecond">我的第一只宠物名字？</option>
+                        <option value="QThird">小学班主任的名字？</option>
+                        <option value="QFourth">初中就读的学校名？</option>
+                    </select>
+                    <div class="col-md-4">
+                        <span id="PasswdQuestionPrompt" class="prompt-input"><i class="fa fa-check-square"></i>密码提示问题已经选择。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="PasswdResult">密码提示答案：</label>
+                    <input type="password" class="col-md-5 h-50 form-control" id="PasswdResult">
+                    <div class="col-md-4">
+                        <span id="PasswdResultPrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>密码提示答案已经输入。</span>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>个人资料</legend>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="userEmail">电子邮箱：</label>
+                    <input type="text" class="col-md-5 h-50 form-control" id="userEmail">
+                    <div class="col-md-4">
+                        <span id="userEmailPrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>电子邮箱已经输入。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3">地区(省/市)：</label>
+                    <select type="text" class="col-md-3 h-50 form-control" id="userProvince">
+                        <option value="hubei">湖北</option>
+                        <option>湖南</option>
+                    </select>
+                    <select type="text" class="col-md-2 h-50 form-control" id="userCity">
+                        <option value="wuhan">武汉</option>
+                    </select>
+                    <div class="col-md-4">
+                        <span id="userRegionPrompt" class="prompt-input"><i class="fa fa-check-square"></i>你所在的地区已经选择。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="blogName">Blog名称：</label>
+                    <input type="text" class="col-md-5 h-50 form-control" id="blogName">
+                    <div class="col-md-4">
+                        <span id="blogNamePrompt" class="prompt-input hide"><i class="fa fa-check-square"></i>Blog名已经输入。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3" for="blogCategory">Blog类别：</label>
+                    <select  class="col-md-5 h-50 form-control" id="blogCategory">
+                        <option value="BCFirst">个人空间</option>
+                        <option value="BCSecond">媒体视频</option>
+                    </select>
+                    <div class="col-md-4">
+                        <span id="blogCategoryPrompt" class="prompt-input"><i class="fa fa-check-square"></i>您Blog的类型已经选择。</span>
+                    </div>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3">注册条款：</label>
+                    <label class="col-md-2" for="regRuleAgree"><input type="radio" name="regRule" id="regRuleAgree"> 同意</label>
+                    <label class="col-md-2" for="regRuleDisagree"><input type="radio" name="regRule" id="regRuleDisagree"> 不同意</label>
+                    <a href="javascript:;">查看注册条款</a>
+                </div>
+                <div class="row pl-5">
+                    <label class="col-md-3">验证码：</label>
+                    <input type="text" class="col-md-2 h-50 form-control" id="VerifyCode">
+                    <img src="img/CheckCode.jpg" alt="验证码" class="col-md-2">
+                </div>
+            </fieldset>
+            <div class="text-center">
+                <input type="submit" class="btn btn-blue-grey" value="OK,确认提交注册信息">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
