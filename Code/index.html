@@ -402,7 +402,27 @@
 
         //注册检查
         function RegCheck() {
-            alert("恭喜你注册成功！");
+            if($.inArray($("#userName").val().trim(), usedUserName) >= 0){
+                alert("用户名已存在，请重新输入用户名！！！");
+                $("#userName").val("");
+                $("#userName").focus();
+                return;
+            }
+            if($("#userNamePrompt").hasClass("hide") || $("#userPasswdPrompt").hasClass("hide") || $("#userPasswdAgainPrompt").hasClass("hide") || $("#PasswdQuestionPrompt").hasClass("hide") || $("#PasswdResultPrompt").hasClass("hide") || $("#userEmailPrompt").hasClass("hide") || $("#userRegionPrompt").hasClass("hide") || $("#blogNamePrompt").hasClass("hide") || $("#blogCategoryPrompt").hasClass("hide")){
+                alert("请仔细检查自己填写的内容是否完整且正确");
+                return;
+            }
+            if($('input:radio[id="regRuleAgree"]:checked').val() == undefined){
+                alert("请同意注册协议!!!");
+                return;
+            }
+            if($("#VerifyCode").val().toLowerCase() !== 'hnxm'){
+                alert("您输入的验证码不正确，请重新输入！！！");
+                $("#VerifyCode").val("");
+                $("#VerifyCode").focus();
+                return;
+            }
+            alert("恭喜你注册成功");
         }
     </script>
 </body>
